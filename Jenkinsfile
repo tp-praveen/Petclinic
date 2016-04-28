@@ -2,7 +2,7 @@ node {
   stage 'Build-Master'  
   
 	def test = sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
-	echo 'sdfdfgfdg:'+ test
+	echo 'value:'+ test
 	//return true
   //checkout scm
   //echo 'maven clean install skipping tests'
