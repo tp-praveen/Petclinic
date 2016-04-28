@@ -1,9 +1,9 @@
 node {
   stage 'Build-Master'  
   
-	sh '$(docker ps)' // | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'.text
+	//sh '$(docker ps)' // | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'.text
 	//println test
-	return true
+	//return true
   //checkout scm
   //echo 'maven clean install skipping tests'
   //sh 'mvn clean install -DskipTests'
@@ -13,7 +13,7 @@ node {
   //if [ ! -z '''$existing''' ]; then  
   // sh 'docker stop $existing'
   //fi 
-  //sh 'which docker'  
+  sh 'which docker'  
   //sh 'docker build -t "tomcat:petclinic" .'
   //sh 'docker stop $(docker ps -a -q)'
  // sh 'docker run -d -p 8083:8080 -e TOMCAT_PASS="mypass" tomcat:petclinic'
