@@ -1,7 +1,7 @@
 node {
   stage 'Build-Master'  
   
-	def proc = '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'.execute()
+	def proc = sh '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
 	println proc
 
   //checkout scm
