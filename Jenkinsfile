@@ -1,7 +1,7 @@
 node {
   stage 'Build-Master'  
   
-	println sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
+	//println sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
 	//echo 'value:'+ test
 	//return true
   //checkout scm
@@ -14,7 +14,7 @@ node {
   // sh 'docker stop $existing'
   //fi 
   sh 'which docker'  
-  //sh 'docker build -t "tomcat:petclinic" .'
-  //sh 'docker stop $(docker ps -a -q)'
- // sh 'docker run -d -p 8083:8080 -e TOMCAT_PASS="mypass" tomcat:petclinic'
+  sh 'docker build -t "tomcat:petclinic" .'
+  sh 'docker stop $(docker ps -a -q)'
+  sh 'docker run -d -p 8083:8080 -e TOMCAT_PASS="mypass" tomcat:petclinic'
 }
