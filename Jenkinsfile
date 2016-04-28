@@ -1,7 +1,7 @@
 node {
   stage 'Build-Master'  
   
-	test << sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
+	echo 'test:' sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
 	echo 'value:'+ test
 	//return true
   //checkout scm
