@@ -1,8 +1,8 @@
 node {
   stage 'Build-Master'  
   
-	echo 'test:' sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
-	echo 'value:'+ test
+	echo sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
+	//echo 'value:'+ test
 	//return true
   //checkout scm
   //echo 'maven clean install skipping tests'
