@@ -4,10 +4,10 @@ node {
   echo 'maven clean install skipping tests'
   sh 'mvn clean install -DskipTests'
   echo 'stopping docker container if running'
-  existing = sh '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'  
-  echo 'docker id:'+$existing
+  echo sh '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'  
+  //echo 'docker id:'+$existing
   //if [ ! -z '''$existing''' ]; then  
-   sh 'docker stop $existing'
+  // sh 'docker stop $existing'
   //fi 
   //sh 'which docker'  
   //sh 'docker build -t "tomcat:petclinic" .'
