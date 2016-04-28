@@ -1,7 +1,7 @@
 node {
   stage 'Build-Master'  
   checkout scm
-  echo 'maven clean install skipping tests
+  echo 'maven clean install skipping tests'
   sh 'mvn clean install -DskipTests'
   echo 'stopping docker container if running
   existing = sh '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'  
