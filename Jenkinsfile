@@ -1,10 +1,8 @@
 node {
   stage 'Build-Master'  
   
-	def proc = 'ls /badDir'.execute()
-	proc.consumeProcessOutput(sout, serr)
-	proc.waitForOrKill(1000)
-	println "out> $sout err> $serr"
+	def proc = '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'.execute()
+	println proc
 
   //checkout scm
   //echo 'maven clean install skipping tests'
