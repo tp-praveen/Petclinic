@@ -5,10 +5,10 @@ node {
   sh 'mvn clean install -DskipTests'
   echo 'stopping docker container if running'
   existing = sh '$(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'  
-  echo existing
-  //if [ ! -z "$existing" ]; then  
-  //docker stop $existing
-  //fi
+  //echo existing
+  if [ ! -z "$existing" ]; then  
+   sh 'docker stop $existing'
+  fi
   //sh 'which docker'  
   //sh 'docker build -t "tomcat:petclinic" .'
   //sh 'docker stop $(docker ps -a -q)'
