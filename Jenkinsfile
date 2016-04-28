@@ -4,7 +4,7 @@ node {
   echo 'maven clean install skipping tests'
   sh 'mvn clean install -DskipTests'
   echo 'stopping docker container if running'
-  def tst = sh '$(docker ps | grep tomcat:petclinic | grep -o '''^[0-9a-z]*''')'  
+  def tst = sh '$(docker ps | grep tomcat:petclinic | grep -o '^[0-9a-z]*')'  
   //echo 'docker id:'+$existing
   //if [ ! -z '''$existing''' ]; then  
   // sh 'docker stop $existing'
