@@ -1,18 +1,7 @@
 node {
   stage 'Build-Master'  
-    checkout scm
-	//println sh '(docker ps | grep tomcat:petclinic | grep -o "^[0-9a-z]*")'
-	//echo 'value:'+ test
-	//return true
-  
-  //echo 'maven clean install skipping tests'
-  //sh 'mvn clean install -DskipTests'
-  //echo 'stopping docker container if running'
-  //def tst = sh '$(docker ps | grep tomcat:petclinic | grep -o '^[0-9a-z]*')'  
-  //echo 'docker id:'+$existing
-  //if [ ! -z '''$existing''' ]; then  
-  // sh 'docker stop $existing'
-  //fi 
+  checkout scm
+	
   sh 'which docker'  
   sh 'docker build -t "tomcat:petclinic" .'
   sh 'docker stop $(docker ps -a -q)'
