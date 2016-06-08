@@ -14,7 +14,7 @@ PetClinic :: Thinkpalm Devops Demonstration
     <spring:url value="/resources/images/favicon.png" var="favicon"/>
     <link rel="shortcut icon" type="image/x-icon" href="${favicon}">
 
-    <title>PetClinic :: a Spring Framework demonstration</title>
+    <title>PetClinic :: Thinkpalm Demo</title>
 
     <%-- CSS generated from LESS --%>
     <spring:url value="/resources/css/petclinic.css" var="petclinicCss"/>
