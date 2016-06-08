@@ -1,7 +1,6 @@
 node {
   stage 'Build-Master'  
-  checkout scm
-	
+  checkout scm	
   sh 'which docker'  
   sh 'docker build -t "tomcat:petclinic" .'
   sh 'docker stop $(docker ps -a -q)'
