@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <%--
-PetClinic :: a Spring Framework demonstration
+PetClinic :: Thinkpalm Devops Demonstration
 --%>
 
 <head>
